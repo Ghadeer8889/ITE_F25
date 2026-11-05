@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الفعاليات - دليل فعاليات الجامعة الافتراضية</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-rtl-adjustments.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html"><img src="assets/img/logo.svg" alt="شعار دليل الفعاليات"
+                        width="36" height="36" class="logo-img"> دليل الفعاليات</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="events.html">الفعاليات</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">عن الدليل</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">اتصل بنا</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-banner">
+            <div class="container">
+                <h1>دليل الفعاليات والورشات</h1>
+                <p>استعرض جميع الفعاليات والأنشطة الطلابية المتاحة.</p>
+            </div>
+        </section>
+
+        <section class="container section-space">
+            <!-- فلتر التصنيفات -->
+            <div class="event-filters" id="eventFilters">
+                <button type="button" class="btn btn-outline-success active" data-filter="all">الكل</button>
+                <button type="button" class="btn btn-outline-success" data-filter="culture">🎭 ثقافة وفنون</button>
+                <button type="button" class="btn btn-outline-success" data-filter="sport">⚽ رياضة</button>
+                <button type="button" class="btn btn-outline-success" data-filter="tech">💻 تكنولوجيا</button>
+                <button type="button" class="btn btn-outline-success" data-filter="music">🎵 موسيقى</button>
+                <button type="button" class="btn btn-outline-success" data-filter="family">👨‍👩‍👧 عائلي
+                    واجتماعي</button>
+            </div>
+            <p class="result-count" id="resultCount"></p>
+
+            <div class="info-box text-center" id="noResults" style="display: none;">
+                <p class="mb-0">لا توجد فعاليات في هذا التصنيف حاليًا.</p>
+            </div>
+
+            <div class="row g-4" id="eventsGrid">
+
+                <div class="col-12 col-md-6 col-lg-4" data-category="culture">
+                    <article class="card event-card shadow-sm">
+                        <img src="assets/img/event-students.jpg" class="event-card-img" alt="أمسية الشعر والقصة">
+                        <div class="card-body d-flex flex-column">
+                            <div class="d-flex justify-content-between mb-3">
+                                <span class="badge bg-danger">الحدث اليوم</span>
+                                <small class="fw-bold text-muted">السبت</small>
+                            </div>
+                            <h2 class="event-title h5 fw-bold">أمسية الشعر والقصة</h2>
+                            <p class="event-description text-secondary small">قراءات أدبية من كتّاب وطلاب الجامعة.</p>
+                            <div class="mb-3"><span class="badge bg-success">ثقافة وفنون</span></div>
+                            <p class="event-location small">📍 المركز الثقافي</p>
+                            <a href="event.html?id=1" class="btn btn-primary w-100 mt-auto">التفاصيل</a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4" data-category="tech">
+                    <article class="card event-card shadow-sm">
+                        <img src="assets/img/event-digital.jpg" class="event-card-img" alt="معرض المشاريع الطلابية">
+                        <div class="card-body d-flex flex-column">
+                            <div class="d-flex justify-content-between mb-3">
+                                <span class="badge bg-secondary">قريبًا</span>
+                                <small class="fw-bold text-muted">الأحد</small>
+                            </div>
+                            <h2 class="event-title h5 fw-bold">معرض المشاريع الطلابية</h2>
+                            <p class="event-description text-secondary small">عرض مشاريع التخرج والأعمال الإبداعية
+                                للطلاب.</p>
+                            <div class="mb-3"><span class="badge bg-success">تكنولوجيا</span></div>
+                            <p class="event-location small">📍 قاعة المعارض</p>
+                            <a href="event.html?id=2" class="btn btn-primary w-100 mt-auto">التفاصيل</a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4" data-category="music">
+                    <article class="card event-card shadow-sm">
+                        <img src="assets/img/event-sport.jpg" class="event-card-img" alt="أمسية موسيقية">
+                        <div class="card-body d-flex flex-column">
+                            <div class="d-flex justify-content-between mb-3">
+                                <span class="badge bg-secondary">قريبًا</span>
+                                <small class="fw-bold text-muted">الاثنين</small>
+                            </div>
+                            <h2 class="event-title h5 fw-bold">أمسية موسيقية</h2>
+                            <p class="event-description text-secondary small">عروض موسيقية حية بمشاركة فرق الجامعة.</p>
+                            <div class="mb-3"><span class="badge bg-success">موسيقى</span></div>
+                            <p class="event-location small">📍 المسرح الجامعي</p>
+                            <a href="event.html?id=3" class="btn btn-primary w-100 mt-auto">التفاصيل</a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4" data-category="family">
+                    <article class="card event-card shadow-sm">
+                        <img src="assets/img/event-students.jpg" class="event-card-img" alt="يوم العائلة الجامعي">
+                        <div class="card-body d-flex flex-column">
+                            <div class="d-flex justify-content-between mb-3">
+                                <span class="badge bg-secondary">قريبًا</span>
+                                <small class="fw-bold text-muted">الأربعاء</small>
+                            </div>
+                            <h2 class="event-title h5 fw-bold">يوم العائلة الجامعي</h2>
+                            <p class="event-description text-secondary small">أنشطة وألعاب للطلاب وعائلاتهم.</p>
+                            <div class="mb-3"><span class="badge bg-success">عائلي واجتماعي</span></div>
+                            <p class="event-location small">📍 الساحة الرئيسية</p>
+                            <a href="event.html?id=4" class="btn btn-primary w-100 mt-auto">التفاصيل</a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4" data-category="tech">
+                    <article class="card event-card shadow-sm">
+                        <img src="assets/img/event-digital.jpg" class="event-card-img" alt="ورشة المهارات الرقمية">
+                        <div class="card-body d-flex flex-column">
+                            <div class="d-flex justify-content-between mb-3">
+                                <span class="badge bg-secondary">قريبًا</span>
+                                <small class="fw-bold text-muted">الأحد</small>
+                            </div>
+                            <h2 class="event-title h5 fw-bold">ورشة المهارات الرقمية</h2>
+                            <p class="event-description text-secondary small">ورشة للتعرّف على أدوات رقمية مفيدة للدراسة
+                                والعمل.</p>
+                            <div class="mb-3"><span class="badge bg-success">تكنولوجيا</span></div>
+                            <p class="event-location small">📍 قاعة الأنشطة</p>
+                            <a href="event.html?id=5" class="btn btn-primary w-100 mt-auto">التفاصيل</a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4" data-category="culture">
+                    <article class="card event-card shadow-sm">
+                        <img src="assets/img/event-students.jpg" class="event-card-img" alt="ملتقى الطلاب">
+                        <div class="card-body d-flex flex-column">
+                            <div class="d-flex justify-content-between mb-3">
+                                <span class="badge bg-secondary">قريبًا</span>
+                                <small class="fw-bold text-muted">الثلاثاء</small>
+                            </div>
+                            <h2 class="event-title h5 fw-bold">ملتقى الطلاب</h2>
+                            <p class="event-description text-secondary small">لقاء للتعارف وتبادل الأفكار بين الطلاب.
+                            </p>
+                            <div class="mb-3"><span class="badge bg-success">ثقافة ومجتمع</span></div>
+                            <p class="event-location small">📍 المركز الثقافي</p>
+                            <a href="event.html?id=6" class="btn btn-primary w-100 mt-auto">التفاصيل</a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4" data-category="sport">
+                    <article class="card event-card shadow-sm">
+                        <img src="assets/img/event-sport.jpg" class="event-card-img" alt="يوم النشاط الرياضي">
+                        <div class="card-body d-flex flex-column">
+                            <div class="d-flex justify-content-between mb-3">
+                                <span class="badge bg-secondary">قريبًا</span>
+                                <small class="fw-bold text-muted">الخميس</small>
+                            </div>
+                            <h2 class="event-title h5 fw-bold">يوم النشاط الرياضي</h2>
+                            <p class="event-description text-secondary small">أنشطة رياضية تشجّع على الحركة والعمل
+                                الجماعي.</p>
+                            <div class="mb-3"><span class="badge bg-success">رياضة</span></div>
+                            <p class="event-location small">📍 الملعب الجامعي</p>
+                            <a href="event.html?id=7" class="btn btn-primary w-100 mt-auto">التفاصيل</a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4" data-category="culture">
+                    <article class="card event-card shadow-sm">
+                        <img src="assets/img/event-digital.jpg" class="event-card-img" alt="ورشة الفنون التشكيلية">
+                        <div class="card-body d-flex flex-column">
+                            <div class="d-flex justify-content-between mb-3">
+                                <span class="badge bg-secondary">قريبًا</span>
+                                <small class="fw-bold text-muted">الجمعة</small>
+                            </div>
+                            <h2 class="event-title h5 fw-bold">ورشة الفنون التشكيلية</h2>
+                            <p class="event-description text-secondary small">جلسة رسم وتصميم تعبيري لتطوير المهارات
+                                البصرية.</p>
+                            <div class="mb-3"><span class="badge bg-success">فنون ورسم</span></div>
+                            <p class="event-location small">📍 مرسم الكلية</p>
+                            <a href="event.html?id=8" class="btn btn-primary w-100 mt-auto">التفاصيل</a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4" data-category="music">
+                    <article class="card event-card shadow-sm">
+                        <img src="assets/img/event-sport.jpg" class="event-card-img" alt="ورشة العزف والموسيقى">
+                        <div class="card-body d-flex flex-column">
+                            <div class="d-flex justify-content-between mb-3">
+                                <span class="badge bg-secondary">قريبًا</span>
+                                <small class="fw-bold text-muted">السبت</small>
+                            </div>
+                            <h2 class="event-title h5 fw-bold">ورشة العزف والموسيقى</h2>
+                            <p class="event-description text-secondary small">تدريبات جماعية على الآلات الموسيقية
+                                والتناغم الصوتي.</p>
+                            <div class="mb-3"><span class="badge bg-success">موسيقى</span></div>
+                            <p class="event-location small">📍 قاعة الموسيقى</p>
+                            <a href="event.html?id=9" class="btn btn-primary w-100 mt-auto">التفاصيل</a>
+                        </div>
+                    </article>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <h3>دليل الفعاليات</h3>
+            <p>معلومات الفعاليات والأنشطة في مكان واحد.</p>
+            <div class="footer-links">
+                <a href="index.html">الرئيسية</a>
+                <a href="about.html">عن الدليل</a>
+                <a href="contact.html">اتصل بنا</a>
+            </div>
+            <div class="footer-contact">
+                <p>للتواصل: <a href="mailto:info@example.com">info@example.com</a></p>
+                <p>تابعنا: <a href="https://www.facebook.com/">Facebook</a> <a
+                        href="https://www.instagram.com/">Instagram</a></p>
+            </div>
+            <p class="copyright">© 2026 دليل فعاليات الجامعة الافتراضية - جميع الحقوق محفوظة</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+</body>
+
+</html>
